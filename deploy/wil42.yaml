@@ -37,7 +37,7 @@ kind: Service
 metadata:
   name: will42-app
 spec:
-  # type: LoadBalancer
+  type: LoadBalancer
   selector:
     app: will42-app
   ports:
