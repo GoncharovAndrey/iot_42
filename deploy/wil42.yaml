@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: will42
+  name: will42-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: will42
+      app: will42-app
   template:
     metadata:
       labels:
-        app: will42
+        app: will42-app
     spec:
       containers:
-        - name: will42
+        - name: will42-app
           image: wil42/playground:v1
           ports:
             - name: http-port
@@ -25,7 +25,7 @@ metadata:
   name: will42-service
 spec:
   selector:
-    app: will42
+    app: will42-app
   ports:
     - name: app
       port: 80
