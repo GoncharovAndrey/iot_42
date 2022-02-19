@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: will42-app
+  labels:
+    app: will42-app
 spec:
   replicas: 1
   selector:
